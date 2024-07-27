@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after 
+  box-sizing: border-box
+
+body 
+  margin: 0
+
+img 
+  display: block
+  max-width: 100%
+  height: auto
+
+main
+  text-align: center
+
+.print-button
+  position: fixed
+  top: 20px
+  left: 20px
+
+.share-button
+  position: fixed
+  top: 50px
+  left: 20px
+
+.demo-wrap
+  width: 1200px
+  margin: 30px auto
+  border: 1px dashed #000
+  padding: 30px 0
+
+.header 
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-bottom: 30px
+
+.logo 
+  width: 50px
+  margin-right: 20px
+
+h1,h2,p
+  margin: 0
+
+.text-box
+  p
+    margin-top: 15px
+
+.article
+  &:not(:last-child)
+    padding-bottom: 50px
+  &.normal
+    .text-box
+      padding: 0 30px
+      margin-bottom: 15px
+  &.typeLR,&.typeRL
+    display: flex
+    align-items: center
+    .text-box,.img-box
+      width: 50%
+    .text-box
+      text-align: left
+      padding: 0 20px
+  &.typeRL
+    flex-direction: row-reverse

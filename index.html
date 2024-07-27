@@ -1,91 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Convert PDF Demo</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <main>
-      <button class="print-button">將虛線內容轉為PDF</button>
-      <button class="share-button">將虛線內容轉為圖片分享</button>
-      <div class="demo-wrap">
-        <div class="pdf-container">
-          <div class="pdf-file" pdf-wrap pdf-name="PDF檔案名稱" style="padding: 0 30px">
-            <div class="header" pdf-header pdf-content>
-              <img class="logo" src="./image/logo.png" alt="" />
-              <h1>Convert PDF Demo</h1>
-            </div>
-            <div class="content">
-              <div class="article normal" pdf-content>
-                <div class="text-box">
-                  <h2>Title</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto obcaecati delectus harum repudiandae, expedita sequi ut, itaque voluptates quis aliquam sapiente ipsam id facere voluptatum recusandae nesciunt ad accusamus suscipit modi voluptas atque ratione nostrum, repellat
-                    amet. Consectetur, delectus ullam aliquam fugiat nisi, et expedita quaerat alias, rerum maxime odit doloremque corporis commodi itaque numquam tempore sed fuga dolor ab unde placeat! Distinctio nulla facere modi possimus temporibus sit reprehenderit praesentium illum atque
-                    expedita, rem inventore suscipit reiciendis. Suscipit fugit recusandae illo aliquam maxime assumenda, sunt consequatur magnam optio nesciunt? Omnis ab illum quibusdam quam magni at non adipisci esse.
-                  </p>
-                </div>
-                <div class="img-box">
-                  <img src="https://picsum.photos/id/180/1198/600" alt="" />
-                </div>
-              </div>
-              <div class="article typeLR" pdf-content>
-                <div class="text-box">
-                  <h2>Title</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto obcaecati delectus harum repudiandae, expedita sequi ut, itaque voluptates quis aliquam sapiente ipsam id facere voluptatum recusandae nesciunt ad accusamus suscipit modi voluptas atque ratione nostrum, repellat
-                    amet. Consectetur, delectus ullam aliquam fugiat nisi, et expedita quaerat alias, rerum maxime odit doloremque corporis commodi itaque numquam tempore sed fuga dolor ab unde placeat! Distinctio nulla facere modi possimus temporibus sit reprehenderit praesentium illum atque
-                    expedita, rem inventore suscipit reiciendis. Suscipit fugit recusandae illo aliquam maxime assumenda, sunt consequatur magnam optio nesciunt? Omnis ab illum quibusdam quam magni at non adipisci esse.
-                  </p>
-                </div>
-                <div class="img-box">
-                  <img src="https://picsum.photos/id/335/600/400" alt="" />
-                </div>
-              </div>
-              <div class="article typeRL" pdf-content>
-                <div class="text-box">
-                  <h2>Title</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto obcaecati delectus harum repudiandae, expedita sequi ut, itaque voluptates quis aliquam sapiente ipsam id facere voluptatum recusandae nesciunt ad accusamus suscipit modi voluptas atque ratione nostrum, repellat
-                    amet. Consectetur, delectus ullam aliquam fugiat nisi, et expedita quaerat alias, rerum maxime odit doloremque corporis commodi itaque numquam tempore sed fuga dolor ab unde placeat! Distinctio nulla facere modi possimus temporibus sit reprehenderit praesentium illum atque
-                    expedita, rem inventore suscipit reiciendis. Suscipit fugit recusandae illo aliquam maxime assumenda, sunt consequatur magnam optio nesciunt? Omnis ab illum quibusdam quam magni at non adipisci esse.
-                  </p>
-                </div>
-                <div class="img-box">
-                  <img src="https://picsum.photos/id/401/600/400" alt="" />
-                </div>
-              </div>
-              <div class="article typeLR" pdf-content>
-                <div class="text-box">
-                  <h2>Title</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum molestiae dolore magni, sapiente architecto unde dolorum quam exercitationem, nam fuga necessitatibus eos cumque velit enim dicta? Molestias laborum dolore sapiente exercitationem repudiandae sit
-                    architecto. Rerum dolores iusto temporibus rem.
-                  </p>
-                </div>
-                <div class="img-box">
-                  <img src="https://picsum.photos/id/335/600/400" alt="" />
-                </div>
-              </div>
-              <div class="article typeRL" pdf-content>
-                <div class="text-box">
-                  <h2>Title</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quis placeat, nostrum perspiciatis labore laborum optio distinctio et minus quasi tempora eligendi excepturi laudantium numquam architecto dignissimos dolores iste similique.</p>
-                </div>
-                <div class="img-box">
-                  <img src="https://picsum.photos/id/401/600/400" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script src="./js/html2canvas.min.js"></script>
-    <script src="./js/jspdf.umd.min.js"></script>
-    <script type="module" src="./js/main.js"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Convert PDF Demo</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+  </head>
+
+  <body>
+
+    <main>
+
+      <button class="print-button">將虛線內容轉為PDF</button>
+
+      <button class="share-button">將虛線內容轉為圖片分享</button>
+
+      <div class="demo-wrap">
+
+        <div class="pdf-container">
+
+          <div class="pdf-file" pdf-wrap pdf-name="PDF檔案名稱" style="padding: 0 30px">
+
+            <div class="header" pdf-header pdf-content>
+
+              <h1>Convert PDF Demo</h1>
+
+            </div>
+
+            <div class="content">
+
+              <div class="article normal" pdf-content>
+
+                <div class="text-box">
+
+                  <h2>Title</h2>
+
+                  <p>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto obcaecati delectus harum repudiandae, expedita sequi ut, itaque voluptates quis aliquam sapiente ipsam id facere voluptatum recusandae nesciunt ad accusamus suscipit modi voluptas atque ratione nostrum, repellat
+
+                    amet. Consectetur, delectus ullam aliquam fugiat nisi, et expedita quaerat alias, rerum maxime odit doloremque corporis commodi itaque numquam tempore sed fuga dolor ab unde placeat! Distinctio nulla facere modi possimus temporibus sit reprehenderit praesentium illum atque
+
+                    expedita, rem inventore suscipit reiciendis. Suscipit fugit recusandae illo aliquam maxime assumenda, sunt consequatur magnam optio nesciunt? Omnis ab illum quibusdam quam magni at non adipisci esse.
+
+                  </p>
+
+                </div>
+
+                <div class="img-box">
+
+                  <img src="https://picsum.photos/id/180/1198/600" alt="" />
+
+                </div>
+
+              </div>
+
+              <div class="article typeLR" pdf-content>
+
+                <div class="text-box">
+
+                  <h2>Title</h2>
+
+                  <p>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto obcaecati delectus harum repudiandae, expedita sequi ut, itaque voluptates quis aliquam sapiente ipsam id facere voluptatum recusandae nesciunt ad accusamus suscipit modi voluptas atque ratione nostrum, repellat
+
+                    amet. Consectetur, delectus ullam aliquam fugiat nisi, et expedita quaerat alias, rerum maxime odit doloremque corporis commodi itaque numquam tempore sed fuga dolor ab unde placeat! Distinctio nulla facere modi possimus temporibus sit reprehenderit praesentium illum atque
+
+                    expedita, rem inventore suscipit reiciendis. Suscipit fugit recusandae illo aliquam maxime assumenda, sunt consequatur magnam optio nesciunt? Omnis ab illum quibusdam quam magni at non adipisci esse.
+
+                  </p>
+
+                </div>
+
+                <div class="img-box">
+
+                  <img src="https://picsum.photos/id/335/600/400" alt="" />
+
+                </div>
+
+              </div>
+
+              <div class="article typeRL" pdf-content>
+
+                <div class="text-box">
+
+                  <h2>Title</h2>
+
+                  <p>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto obcaecati delectus harum repudiandae, expedita sequi ut, itaque voluptates quis aliquam sapiente ipsam id facere voluptatum recusandae nesciunt ad accusamus suscipit modi voluptas atque ratione nostrum, repellat
+
+                    amet. Consectetur, delectus ullam aliquam fugiat nisi, et expedita quaerat alias, rerum maxime odit doloremque corporis commodi itaque numquam tempore sed fuga dolor ab unde placeat! Distinctio nulla facere modi possimus temporibus sit reprehenderit praesentium illum atque
+
+                    expedita, rem inventore suscipit reiciendis. Suscipit fugit recusandae illo aliquam maxime assumenda, sunt consequatur magnam optio nesciunt? Omnis ab illum quibusdam quam magni at non adipisci esse.
+
+                  </p>
+
+                </div>
+
+                <div class="img-box">
+
+                  <img src="https://picsum.photos/id/401/600/400" alt="" />
+
+                </div>
+
+              </div>
+
+              <div class="article typeLR" pdf-content>
+
+                <div class="text-box">
+
+                  <h2>Title</h2>
+
+                  <p>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum molestiae dolore magni, sapiente architecto unde dolorum quam exercitationem, nam fuga necessitatibus eos cumque velit enim dicta? Molestias laborum dolore sapiente exercitationem repudiandae sit
+
+                    architecto. Rerum dolores iusto temporibus rem.
+
+                  </p>
+
+                </div>
+
+                <div class="img-box">
+
+                  <img src="https://picsum.photos/id/335/600/400" alt="" />
+
+                </div>
+
+              </div>
+
+              <div class="article typeRL" pdf-content>
+
+                <div class="text-box">
+
+                  <h2>Title</h2>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quis placeat, nostrum perspiciatis labore laborum optio distinctio et minus quasi tempora eligendi excepturi laudantium numquam architecto dignissimos dolores iste similique.</p>
+
+                </div>
+
+                <div class="img-box">
+
+                  <img src="https://picsum.photos/id/401/600/400" alt="" />
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <script src="./js/html2canvas.min.js"></script>
+
+    <script src="./js/jspdf.umd.min.js"></script>
+
+    <script type="module" src="./js/main.js"></script>
+
+  </body>
+
+</html>
+
